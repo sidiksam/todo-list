@@ -48,10 +48,15 @@ export default function create() {
 
   const removeList = (id) => {
     const tasks = JSON.parse(localStorage.getItem('localTasks')) ?? [];
-    const filteredLists = tasks.filter((task) => task.index !== parseInt(id, 10));
+    const filteredLists = tasks.filter(
+      (task) => task.index !== parseInt(id, 10),
+    );
     tasks.length = 0;
     let i = 0;
-    filteredLists.forEach((e) => { e.index = i; i += 1; });
+    filteredLists.forEach((e) => {
+      e.index = i;
+      i += 1;
+    });
     tasks.push(...filteredLists);
     localStorage.setItem('localTasks', JSON.stringify(filteredLists));
     display(filteredLists);
