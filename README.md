@@ -16,6 +16,7 @@ Install
 Usage
 Run tests
 Deployment
+This is the link to the live demo ![to-do list](https://sidiksam.github.io/todo-list/dist/)
 
 ## Authors
 
